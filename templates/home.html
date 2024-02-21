@@ -1,52 +1,34 @@
 <!DOCTYPE <html>
 <html>
   <head>
-
-    <title>Jovian Career</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
-      h1{
-        font-size:40px;
-        font-family:Helvetica;
-        font-weight:bold;
-        text: align center;
-    
-        color:rgb(50,50,50);
-      }
       #banner{
+        height: 360px;
         width: 100%;
-        height:360px;
-        object: fit cover;
-      }
-      h2{
-        font-family:Helvetica;
-        font-size:32px;
-        color:rgb(100,100,100);
-        font: weight normal;
-        text: align center;
-      }
-      .bodytext{
-        font-family:Helvetica;
-        color: rgb(80, 80, 80);
-        
-      }
-      #container{
-        max-width: 720px;
-        margin:0 auto 0 auto; 
+        object-fit:cover;
       }
     </style>
+    <title>Jovian Career</title>
   </head>
   <body>
-    <div id="container">
-    <h1>Jovian Career</h1>
-    <img id="banner" src="https://d8b154dd-f326-4d6f-a279-748e0f83ea2f-00-1q29pz13pk4tr.pike.replit.dev/static/banner.jpg.jpg">
-    <h2>About Jovian</h2>
-    <p class="bodytext">In today's competitive job market, finding the right career opportunity can be daunting. Enter Jovian Career Search Page, a revolutionary platform designed to streamline the job hunting process and connect job seekers with their ideal employers. With its user-friendly interface and cutting-edge features, Jovian is changing the way individuals approach their career search.
+    <div class="container">
+    <h1 class="text-center mt-2 mb-2">{{company_name}} Career</h1>
+    <img class="img-fluid" id="banner" src="https://d8b154dd-f326-4d6f-a279-748e0f83ea2f-00-1q29pz13pk4tr.pike.replit.dev/static/banner.jpg.jpg">
+    <h2 class="text-center mt-2 mb-2">About Jovian</h2>
+    <p class="lead">In today's competitive job market, finding the right career opportunity can be daunting. Enter Jovian Career Search Page, a revolutionary platform designed to streamline the job hunting process and connect job seekers with their ideal employers. With its user-friendly interface and cutting-edge features, Jovian is changing the way individuals approach their career search.
 </p>
-    <h2>Open Positions</h2>
-    <p class="bodytext">TODO Show the jobs here</p>
+    <h2 class="text-center">Open Positions</h2>
+    <div>
+      {%for job in jobs%}
+        {%include 'jobitem.html'%}
+      {%endfor%}
+    </div>
       <div style="text-align:center;">
-    <button>Contact Us</button>
-        <p>Copyright 2024</p>
+    <button class="btn btn-outline-primary btn-lg">Contact Us</button>
+        <p class="lead mt-4" >Copyright 2024</p>
       </div>
     </div>
   </body>
