@@ -9,17 +9,26 @@
         height: 360px;
         width: 100%;
         object-fit:cover;
+        margin-bottom:16px;
       }
     </style>
     <title>Career Portal</title>
+    <br>
   </head>
   <body>
+    {%include 'nav.html'%}
+    <img class="img-fluid" id="banner" src="https://d8b154dd-f326-4d6f-a279-748e0f83ea2f-00-1q29pz13pk4tr.pike.replit.dev/static/banner.jpg.jpg">
     <div class="container">
     <h1 class="text-center mt-2 mb-2">{{company_name}}</h1>
-    <img class="img-fluid" id="banner" src="https://d8b154dd-f326-4d6f-a279-748e0f83ea2f-00-1q29pz13pk4tr.pike.replit.dev/static/banner.jpg.jpg">
-    <h2 class="text-center mt-2 mb-2">About This Portal</h2>
-    <p class="lead">In today's competitive job market, finding the right career opportunity can be daunting. This Career Search Page, a revolutionary platform designed to streamline the job hunting process and connect job seekers with their ideal employers. With its user-friendly interface and cutting-edge features, Jovian is changing the way individuals approach their career search.
+    <div class="row" style="margin-bottom:16px">
+      <div class="col-md-6">
+    <p class="lead">In today's competitive job market, finding the right career opportunity can be daunting. This Career Search Page, a revolutionary platform designed to streamline the job hunting process and connect job seekers with their ideal employers. With its user-friendly interface and cutting-edge features, This Portal is changing the way individuals approach their career search.Job search portals aggregate job postings from multiple sources, including company websites, recruitment agencies, and job boards. This provides job seekers with access to a wide range of job opportunities, from entry-level positions to executive roles, across different industries and geographic locations.
+      <br>
 </p>
+      </div>
+      <div class="d-none d-md-block col-md-6">
+      <img src="/static/people.jpg" style="height:320px;border-radius:4px">
+    </div>
     <h2 class="text-center">Open Positions</h2>
     <div>
       {%for job in jobs%}
@@ -28,8 +37,8 @@
     </div>
       <div style="text-align:center;">
     <button class="btn btn-outline-primary btn-lg">Contact Us</button>
-        <p class="lead mt-4" >Copyright 2024</p>
       </div>
     </div>
+    {%include 'footer.html'%}
   </body>
 </html>
